@@ -33,49 +33,65 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun validateRegistration(){
+        clearErrors()
         var formError = false
         val firstName = binding.etFirstName.text.toString()
         if(firstName.isBlank()){
             formError = true
-            binding.tilFirstName.error = "First name is required"
+            binding.tilFirstName.error = getString(R.string.first_name_is_required)
         }
         val lastname = binding.etLastName.text.toString()
         if (lastname.isBlank()){
             formError = true
-            binding.tilLastName.error = "Last name is required"
+            binding.tilLastName.error = getString(R.string.last_name_is_required)
         }
         val Email = binding.etEmail.text.toString()
         if (Email.isBlank()){
             formError = true
-            binding.tilEmail.error = " Email is required"
+            binding.tilEmail.error = getString(R.string.email_is_required)
         }
         val CodiveID = binding.etcodeId.text.toString()
         if (CodiveID.isBlank()){
             formError = true
-            binding.tilCodeId.error = "CodehiveID is required"
+            binding.tilCodeId.error = getString(R.string.codehiveid_is_required)
         }
         val UserName = binding.etUsername.text.toString()
         if (UserName.isBlank()){
             formError = true
-            binding.tilUserName.error = "UserName is required"
+            binding.tilUserName.error = getString(R.string.username_is_required)
         }
         val Password = binding.etPassword.text.toString()
         if (Password.isBlank()){
             formError = true
-            binding.tilPassword.error = "Password is required"
+            binding.tilPassword.error = getString(R.string.password_is_required)
         }
         val Passwordconf = binding.etConfirmPassword.text.toString()
         if (Passwordconf.isBlank()){
             formError = true
 
-            binding.tilConfirmPassword.error = "Password confirmation is required"
+            binding.tilConfirmPassword.error = getString(R.string.password_confirmation_is_required)
 
 
         }
         if (Password!= Passwordconf) {
             formError = true
-            binding.tilConfirmPassword.error = "Password and confirmation do not match"
+            binding.tilConfirmPassword.error =
+                getString(R.string.password_and_confirmation_do_not_match)
 
         }
+        if (!formError){
+            // processed to register
+        }
+    }
+
+    fun clearErrors(){
+        binding.tilFirstName.error = null
+        binding.tilLastName.error = null
+        binding.tilEmail.error = null
+        binding.tilCodeId.error = null
+        binding.tilUserName.error = null
+        binding.tilPassword.error = null
+        binding.tilConfirmPassword.error = null
+
     }
 }

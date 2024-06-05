@@ -6,4 +6,12 @@
     <string name="username">UserName</string>
     <string name="password">Password</string>
     <string name="confirm_password">Confirm password</string>
+    <string name="first_name_is_required">First Name is required</string>
+    <string name="last_name_is_required">Last name is required</string>
+    <string name="email_is_required">" Email is required"</string>
+    <string name="codehiveid_is_required">CodehiveID is required</string>
+    <string name="username_is_required">UserName is required</string>
+    <string name="password_is_required">Password is required</string>
+    <string name="password_confirmation_is_required">Password confirmation is required</string>
+    <string name="password_and_confirmation_do_not_match">Password and confirmation do not match</string>
 </resources>
